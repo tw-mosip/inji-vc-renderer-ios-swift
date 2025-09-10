@@ -32,8 +32,8 @@ final class InjiVcRendererTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        // Inject the mock into SvgHelper
-        SvgHelper.networkHandler = MockNetworkManager()
+        // Inject the mock into Utils
+        Utils.networkHandler = MockNetworkManager()
         renderer = InjiVcRenderer(traceabilityId: traceabilityId)
     }
 

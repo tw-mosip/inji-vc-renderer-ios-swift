@@ -18,12 +18,12 @@ public class InjiVcRenderer {
     public func renderVC(vcJsonString: String) throws -> [Any] {
         let vcJsonObject = try parseVcJson(vcJsonString: vcJsonString)
 
-        let renderMethodArray = try SvgHelper.parseRenderMethod(vcJsonObject, traceabilityId: traceabilityId)
+        let renderMethodArray = try Utils.parseRenderMethod(vcJsonObject, traceabilityId: traceabilityId)
         
         var results: [String] = []
 
         for case let renderMethod in renderMethodArray {
-            let svgTemplate = try SvgHelper.extractSvgTemplate(renderMethod: renderMethod, vcJsonString: vcJsonString, traceabilityId: traceabilityId)
+            let svgTemplate = try Utils.extractSvgTemplate(renderMethod: renderMethod, vcJsonString: vcJsonString, traceabilityId: traceabilityId)
                    
                    let renderProperties = (renderMethod[Constants.TEMPLATE] as? [String: Any])?[Constants.RENDER_PROPERTY] as? [String]
                    

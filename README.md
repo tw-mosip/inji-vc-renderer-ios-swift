@@ -55,7 +55,9 @@ Sources
 │── templateEngine/svg/        # Json Pointer Algorithm implementation
     |--JsonPointerResolver.swift    
 ├── utils      # Utility classes
-    ├── SVGHelper.kt               # SVG related utilities
+|    ├── Utils.kt               # SVG related utilities
+├── networkManager      
+|   ├── NetworkManager.kt       # Network related utilities
 ```
 
 ###### Exceptions

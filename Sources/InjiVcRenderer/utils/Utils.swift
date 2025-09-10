@@ -1,9 +1,11 @@
 import Foundation
-class SvgHelper {
+class Utils {
     static var networkHandler: NetworkManagerProtocol = NetworkManager() as NetworkManagerProtocol
     static var qrCodeGenerator: QrCodeGeneratorProtocol = QrCodeGenerator() as QrCodeGeneratorProtocol
 
-    public static let className = String(describing: SvgHelper.self)
+    public static let className = String(describing: Utils.self)
+    
+    
 
     /// Extracts an SVG template after validation and QR injection
     static func extractSvgTemplate(renderMethod: [String: Any],

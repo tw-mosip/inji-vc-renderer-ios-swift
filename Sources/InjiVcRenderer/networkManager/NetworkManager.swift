@@ -50,7 +50,7 @@ class NetworkManager: NetworkManagerProtocol {
                 return
             }
 
-            guard let mimeType = httpResponse.mimeType, mimeType == "image/svg+xml" else {
+            guard let mimeType = httpResponse.mimeType, mimeType == NetworkConstants.CONTENT_TYPE_SVG  else {
                 fetchError = VcRendererException(
                     errorCode: VcRendererErrorCodes.svgFetchError,
                     message: "Expected image/svg+xml but got: \(httpResponse.mimeType ?? "unknown")",
