@@ -46,7 +46,7 @@ class NetworkManager: NetworkManagerProtocol {
                 return
             }
 
-            let mimeType = httpResponse.value(forHTTPHeaderField: "Content-Type")
+            let mimeType = httpResponse.allHeaderFields["Content-Type"] as? String
 
             do {
                 let contentType = try ContentType.fromType(
